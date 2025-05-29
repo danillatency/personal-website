@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+    --background-color: #7074ff;
+    --foreground-color: rgb(76, 67, 146);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+    max-width: 1000px;
+    width: 100%;
+    overflow-x: clip;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+.heading-box {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.patterns-box {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: var(--foreground-color);
+}
+
+.patterns-box__pattern {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patterns-box__pattern__button {
+    padding: 25px 0 0 25px;
+    display: flex;
+    font: 400 20px/16px "Nunito";
+    align-items: center;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.standalone-font {
+    font: 400 20px/16px "Nunito";
+    color: white;
+    width: 100%;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.headings-font {
+    font: 900 40px/40px "Roboto";
+    color: white;
+}
+
+.main-font {
+    font: 400 24px/40px "Roboto";
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.self-align-left {
+    align-self: flex-start;
+}
+
+.vertical-space-50 {
+    height: 50px;
+    width: 100%;
+}
+
+.icon {
+    width: 100px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 4px;
+    border-color: var(--foreground-color);
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-drop {
+    width: 40px;
+    transform: rotateZ(180deg);
+}
+
+.icon-drop_undropped {
+    transform: rotateZ(0deg);
+}
+
+.line_mini {
+    height: 4px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: var(--foreground-color);
+    margin: 25px 0;
+}
+
+.anicropper {
+    height: fit-content;
+    overflow-y: clip;
+}
+
+.anicropper_zero {
+    height: 0px !important;
+}
+
+.slide {
+    transform: translateY(-100%);
+}
+
+.animated {
+    transition: all 500ms;
+}
