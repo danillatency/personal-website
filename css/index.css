@@ -7,18 +7,20 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    zoom: 67%;
 }
 
 :root {
     --background-color: #7074ff;
     --foreground-color: rgb(76, 67, 146);
+    --padding-50: 50px;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 var(--padding-50);
     max-width: 1000px;
     width: 100%;
     overflow-x: clip;
@@ -27,7 +29,7 @@ body {
 }
 
 .heading-box {
-    padding: 50px;
+    padding: var(--padding-50);
     display: flex;
     align-items: center;
     background-color: var(--background-color);
@@ -35,7 +37,7 @@ body {
 
 .patterns-box {
     width: 100%;
-    padding: 50px;
+    padding: var(--padding-50);
     box-sizing: border-box;
     border-radius: 50px;
     background-color: var(--foreground-color);
@@ -62,7 +64,7 @@ body {
 }
 
 .standalone-font {
-    font: 400 20px/16px "Nunito";
+    font: 400 20px/30px "Nunito";
     color: white;
     width: 100%;
     background-color: var(--background-color);
@@ -97,7 +99,6 @@ body {
     box-sizing: border-box;
     border-radius: 50px;
     border-style: solid;
-    border-radius: 50px;
     border-width: 4px;
     border-color: var(--foreground-color);
     margin-left: 25px;
@@ -139,4 +140,15 @@ body {
 
 .animated {
     transition: all 500ms;
+}
+
+@media (width < 480px) {
+    :root {
+        --padding-50: 25px;
+    }
+
+    .main-font {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
